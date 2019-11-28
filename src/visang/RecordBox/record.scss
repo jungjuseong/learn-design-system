@@ -1,0 +1,129 @@
+@import "../button.scss";
+
+.record_box {
+  top: 450px;
+  visibility: visible;
+
+  &.off {
+    display: none;
+  }
+
+  .swiper-pagination-bullet {
+    pointer-events: none;
+  }
+  text-align: center;
+  .swiper-container {
+    position: relative;
+    width: 100%;
+    height: 322px;
+    margin-top: 102px;
+    .swiper-pagination {
+      position: absolute;
+      top: 0px;
+      bottom: unset;
+      font-size: 0px;
+      .swiper-pagination-bullet-active {
+        background: #ff2a66;
+      }
+    }
+
+    // background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  .info {
+    position: relative;
+    margin: 0px auto;
+    width: 344px;
+    height: 66px;
+    padding-top: 2px;
+    line-height: 64px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #db212e;
+    border-width: 1px;
+    border-style: solid;
+    border-top-color: #000;
+    border-left-color: #000;
+    border-right-color: #fff;
+    border-bottom-color: #fff;
+
+    & .recordWave {
+      position: relative;
+      background-image: url("/content/kor_lib/images/common/wave_during_record.png");
+      width: 239px;
+      height: 9px;
+      margin: 0px auto;
+      margin-top: 25px;
+
+      & span {
+        position: absolute;
+        font-size: 15px;
+        right: -45px;
+        bottom: -10px;
+      }
+    }
+    & .on {
+      margin-top: 5px;
+      background-image: url("/content/kor_lib/images/common/sound_ani.gif");
+      width: 245px;
+      height: 48px;
+    }
+
+    &.recording {
+      color: #f1ff4d;
+      & > span:first-child {
+        display: inline-block;
+        vertical-align: top;
+        animation: blink-recording 1s ease infinite;
+      }
+      & > span:nth-child(2) {
+        display: inline-block;
+        vertical-align: top;
+        font-size: 20px;
+        font-weight: normal;
+        padding-left: 5px;
+        padding-top: 6px;
+      }
+    }
+  }
+
+  .line {
+    position: relative;
+    top: 33px;
+    border-width: 1px;
+    border-style: solid;
+    border-top-width: 2px;
+    border-top-color: rgba(255, 0, 0, 0.8);
+    border-left-color: rgba(255, 0, 0, 0.8);
+    border-right-color: rgba(255, 255, 255, 0.8);
+    border-bottom-color: rgba(255, 255, 255, 0.8);
+  }
+
+  .btn_record {
+    margin-top: 30px;
+    margin-right: 20px;
+    width: 80px;
+    height: 80px;
+    background-size: 80px;
+    @include btn_on_dis(
+      url("/kor_lib/images/common/btn_record.png"),
+      url("/kor_lib/images/common/btn_record_on.png"),
+      url("//kor_lib/images/common/btn_record_dis.png"),
+      80px,
+      80px
+    );
+  }
+  
+  .btn_play {
+    margin-top: 30px;
+    margin-left: 20px;
+    @include btn_on_dis(
+      url("/kor_lib/images/common/btn_play_s.png"),
+      url("/kor_lib/images/common/btn_play_s_on.png"),
+      url("/kor_lib/images/common/btn_play_s_dis.png"),
+      80px,
+      80px
+    );
+  }
+}

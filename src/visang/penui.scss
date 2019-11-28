@@ -1,0 +1,142 @@
+
+$greenColor: "output/resources/app/public/content";
+@import './button.scss';
+
+@mixin penui($bottom: 0px) {
+  position: absolute;
+  background-image: url("/kor_lib/images/penui/pen_box.png");
+  left: 50%;
+  width: 622px;
+  transform: translateX(-50%);
+  bottom: -102px;
+  height: 102px;
+  z-index: 10;
+
+  transition: bottom 0.3s;
+  &.on {
+    bottom: 0px;
+  }
+
+  & > .pen_select {
+    position: absolute;
+    left: 315px;
+    top: 37px;
+
+    & > .pen_icon {
+      @include btn_on_dis(
+        url("/kor_lib/images/penui/icon_pen.png"),
+        url("/kor_lib/images/penui/icon_pen_on.png"),
+        url("/kor_lib/images/penui/icon_pen_dis.png"),
+        50px,
+        50px
+      );
+      cursor: pointer;
+    }
+    & > .pen_thick {
+      @include btn_on_dis(
+        url("/kor_lib/images/penui/icon_thick.png"),
+        url("/kor_lib/images/penui/icon_thick_on.png"),
+        url("/kor_lib/images/penui/icon_thick_dis.png"),
+        50px,
+        50px
+      );
+      cursor: pointer;
+    }
+  }
+
+  & > .pen_color {
+    position: absolute;
+    left: 45px;
+    top: 37px;
+    & > .btn_000000 {
+      vertical-align: top;
+      @include btn_on_dis(
+        url("/kor_lib/images/penui/btn_000000.png"),
+        url("/kor_lib/images/penui/btn_000000_on.png"),
+        url("/kor_lib/images/penui/btn_000000_dis.png"),
+        50px,
+        50px
+      );
+    }
+    & > .btn_1347e9 {
+      vertical-align: top;
+      @include btn_on_dis(
+        url("/kor_lib/images/penui/btn_1347e9.png"),
+        url("/kor_lib/images/penui/btn_1347e9_on.png"),
+        url("/kor_lib/images/penui/btn_1347e9_dis.png"),
+        50px,
+        50px
+      );
+    }
+    & > .btn_ec1919 {
+      vertical-align: top;
+      @include btn_on_dis(
+        url("/kor_lib/images/penui/btn_ec1919.png"),
+        url("/kor_lib/images/penui/btn_ec1919_on.png"),
+        url("/kor_lib/images/penui/btn_ec1919_dis.png"),
+        50px,
+        50px
+      );
+    }
+    & > .btn_30aa01 {
+      vertical-align: top;
+      @include btn_on_dis(
+        url("/kor_lib/images/penui/btn_30aa01.png"),
+        url("/kor_lib/images/penui/btn_30aa01_on.png"),
+        url("/kor_lib/images/penui/btn_30aa01_dis.png"),
+        50px,
+        50px
+      );
+    }
+    & > .btn_fddc00 {
+      vertical-align: top;
+      @include btn_on_dis(
+        url("/kor_lib/images/penui/btn_fddc00.png"),
+        url("/kor_lib/images/penui/btn_fddc00_on.png"),
+        url("/kor_lib/images/penui/btn_fddc00_dis.png"),
+        50px,
+        50px
+      );
+    }
+  }
+
+  & > .pen_button {
+    position: absolute;
+    right: 30px;
+    top: 37px;
+    .btn_eraser {
+      vertical-align: top;
+      @include btn_on_dis(
+        url("/kor_lib/images/penui/btn_eraser.png"),
+        url("/kor_lib/images/penui/btn_eraser_on.png"),
+        url("/kor_lib/images/penui/btn_eraser_dis.png"),
+        50px,
+        50px
+      );
+    }
+    .btn_undo {
+      vertical-align: top;
+      @include btn_down_dis(
+        url("/kor_lib/images/penui/btn_undo.png"),
+        url("/kor_lib/images/penui/btn_undo_on.png"),
+        url("/kor_lib/images/penui/btn_undo_dis.png"),
+        50px,
+        50px
+      );
+    }
+    .btn_reset {
+      vertical-align: top;
+      @include btn_down_dis(
+        url("/kor_lib/images/penui/btn_reset.png"),
+        url("/kor_lib/images/penui/btn_reset_on.png"),
+        "",
+        50px,
+        50px
+      );
+    }
+  }
+}
+
+.penui {
+  @include penui();
+}
