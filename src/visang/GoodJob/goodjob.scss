@@ -1,0 +1,33 @@
+.common_goodjob {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-image: url("/kor_lib/images/goodjob.png");
+    width: 410px; 
+    height: 407px;
+    transform: translate(-50%, -50%) scale(0.8, 0.8);
+    visibility: hidden;
+    background-position: center;
+  
+    pointer-events: none;
+    z-index: -1;
+  
+    &.on {
+      visibility: visible; 
+      pointer-events: auto;
+      z-index: 100;
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1, 1);
+      transition: transform 0.3s cubic-bezier(0.405, 0.42, 0.135, 1.2) 0s;
+    }
+  
+    &.off {
+      visibility: visible;
+      pointer-events: auto;
+      z-index: 100;
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.8, 0.8);
+      transition: transform 0.3s, opacity 0.3s;
+    }
+  }
+  

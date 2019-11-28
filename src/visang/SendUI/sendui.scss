@@ -1,0 +1,47 @@
+@import "../button.scss";
+
+@mixin sendbtn {
+  position: absolute;
+  z-index: 11;
+  touch-action: none;
+}
+
+@mixin fel_topad {
+  @include sendbtn;
+  bottom: 15px;
+  right: 5px;
+  filter: drop-shadow(6px 6px 4px rgba(0, 0, 0, 0.8));
+  @include btn_on(
+    url("/kor_lib/images/topad.svg"),
+    url("/kor_lib/images/topad_on.svg"),
+    81px,
+    75px
+  );
+  &.on {
+    filter: drop-shadow(6px 6px 4px rgba(0, 0, 0, 0.6));
+  }
+}
+
+@mixin fel_toteacher {
+  @include sendbtn;
+  bottom: 20px;
+  right: 20px;
+  filter: drop-shadow(6px 6px 4px rgba(0, 0, 0, 0.8));
+  @include btn_on(
+    url("/kor_lib/images/toteacher.svg"),
+    url("/kor_lib/images/toteacher_on.svg"),
+    95px,
+    87px
+  );
+
+  &.on {
+    filter: drop-shadow(6px 6px 4px rgba(0, 0, 0, 0.6));
+  }
+}
+
+.fel_toteacher {
+  @include fel_toteacher;
+}
+.fel_topad {
+  @include fel_topad;
+}

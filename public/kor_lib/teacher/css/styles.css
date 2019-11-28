@@ -1,0 +1,1902 @@
+@charset "UTF-8";
+button:focus, input:focus {
+    outline: none !important;
+}
+
+html, body {
+    padding: 0px;
+    margin: 0px;
+    user-select: none;
+    border: 0px;
+    backface-visibility: hidden;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    /* 버튼 포커스시 색상 변하는 현상 방지 */
+    font-family: NanumBarunGothic !important;
+    -webkit-font-smoothing: antialiased;
+    font-size: 40px;
+    overflow: hidden;
+}
+
+img {
+    padding: 0px;
+    margin: 0px;
+    user-select: none;
+    border: 0px;
+    outline: 0px solid transparent;
+}
+
+div, p {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+#common_audio {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+}
+
+#ding_audio {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+}
+
+#dingend_audio {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+}
+
+#wrap {
+    width: 1280px;
+    height: 800px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.bg_svg {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    top: 0px;
+    height: 100%;
+}
+
+.swiper-container {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    top: 0px;
+    height: 100%;
+}
+
+.common_back {
+    background-size: 100% 100%;
+    touch-action: none;
+    padding: 0px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    background-image: url("/content/kor_lib/images/btn_back.png");
+    background-repeat: no-repeat;
+    width: 78px;
+    height: 73px;
+    pointer-events: unset;
+    cursor: pointer;
+}
+
+.common_back:disabled {
+    background-image: "";
+    pointer-events: none;
+    cursor: auto;
+}
+
+.common_back.down {
+    background-image: url("/content/kor_lib/images/btn_back_down.png");
+}
+
+.common_back:before {
+    position: absolute;
+    pointer-events: none;
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+    overflow: hidden;
+    z-index: -1;
+    content: url("/content/kor_lib/images/btn_back.png") url("/content/kor_lib/images/btn_back_down.png") "";
+}
+
+.common_back.down {
+    transform: scale(1.1, 1.1);
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 16px;
+}
+
+.swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    opacity: 0.3;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #47F6E9;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.page_direction {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    top: 0px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.page_direction > div {
+    position: absolute;
+    transform: translateY(100px);
+    transition: transform 0.5s ease-out, opacity 0.5s;
+    opacity: 0;
+}
+
+.page_direction.on > div {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.page_direction.hide > div {
+    visibility: hidden;
+}
+
+#preload_hidden {
+    position: absolute;
+    pointer-events: none;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    overflow: hidden;
+}
+
+@keyframes popup {
+    0% {
+        visibility: visible;
+        transform: scale(0.2, 0.2);
+    }
+    95% {
+        visibility: visible;
+        transform: scale(1.2, 1.2);
+    }
+    100% {
+        visibility: visible;
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes popoff {
+    0% {
+        visibility: visible;
+        transform: scale(1, 1);
+    }
+    99% {
+        visibility: visible;
+        transform: scale(0.2, 0.2);
+    }
+    100% {
+        visibility: hidden;
+        transform: scale(0.2, 0.2);
+    }
+}
+
+@font-face {
+    font-family: NanumBarunGothic;
+    src: url("/content/kor_lib/font/NanumBarunGothic.woff") format("woff");
+}
+
+@font-face {
+    font-family: NanumBarunGothic;
+    font-weight: bold;
+    src: url("/content/kor_lib/font/NanumBarunGothicBold.woff") format("woff");
+}
+
+button:focus, input:focus {
+    outline: none !important;
+}
+
+#preload_hidden {
+    font-family: NanumBarunGothicKor;
+    font-weight: bold;
+    background-image: url("/content/kor_lib/P/R2_voca_act/common/back1.png");
+}
+
+#preload_hidden > span {
+    background-image: url("/content/kor_lib/P/R2_voca_act/common/back2.png");
+}
+
+#wrap {
+    background-image: url("/content/kor_lib/images/theme3_bg.png");
+}
+
+.btn_box {
+    position: absolute;
+    white-space: nowrap;
+    right: 76px;
+    width: 183px;
+    top: 40px;
+    height: 39px;
+    z-index: 11;
+    padding: 1px;
+    background-color: #1B3665;
+    border-radius: 19.5px;
+}
+
+.btn_box .btn_1 {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.btn_box .btn_2 {
+    margin-left: 6px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.btn_box .btn_1 {
+    touch-action: none;
+    padding: 0px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    background-image: url("/content/kor_lib/P/R2_voca_act/teacher/images/btn_1_dis.png");
+    background-repeat: no-repeat;
+    width: 88px;
+    height: 40px;
+    pointer-events: unset;
+    cursor: pointer;
+}
+
+.btn_box .btn_1:disabled {
+    background-image: url("/content/kor_lib/P/R2_voca_act/teacher/images/btn_1.png");
+    pointer-events: none;
+    cursor: auto;
+}
+
+.btn_box .btn_1.down {
+    background-image: url("/content/kor_lib/P/R2_voca_act/teacher/images/btn_1_down.png");
+}
+
+.btn_box .btn_1:before {
+    position: absolute;
+    pointer-events: none;
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+    overflow: hidden;
+    z-index: -1;
+    content: url("/content/kor_lib/P/R2_voca_act/teacher/images/btn_1_dis.png") url("/content/kor_lib/P/R2_voca_act/teacher/images/btn_1_down.png") url("/content/kor_lib/P/R2_voca_act/teacher/images/btn_1.png");
+}
+
+.btn_box .btn_2 {
+    touch-action: none;
+    padding: 0px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    background-image: url("/content/kor_lib/P/R2_voca_act/teacher/images/btn_2_dis.png");
+    background-repeat: no-repeat;
+    width: 88px;
+    height: 40px;
+    pointer-events: unset;
+    cursor: pointer;
+}
+
+.btn_box .btn_2:disabled {
+    background-image: url("/content/kor_lib/P/R2_voca_act/teacher/images/btn_2.png");
+    pointer-events: none;
+    cursor: auto;
+}
+
+.btn_box .btn_2.down {
+    background-image: url("/content/kor_lib/P/R2_voca_act/teacher/images/btn_2_down.png");
+}
+
+.btn_box .btn_2:before {
+    position: absolute;
+    pointer-events: none;
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+    overflow: hidden;
+    z-index: -1;
+    content: url("/content/kor_lib/P/R2_voca_act/teacher/images/btn_2_dis.png") url("/content/kor_lib/P/R2_voca_act/teacher/images/btn_2_down.png") url("/content/kor_lib/P/R2_voca_act/teacher/images/btn_2.png");
+}
+
+.page_direction > div {
+    position: absolute;
+    background-image: url("/content/kor_lib/P/R2_voca_act/teacher/images/direction.png");
+    width: 800px;
+    height: 600px;
+    left: calc(50% - 800px/2);
+    top: calc(50% - 600px/2);
+}
+
+.page1 {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    top: 0px;
+    height: 100%;
+}
+
+.page1 .setup {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    top: 0px;
+    height: 100%;
+}
+
+.page1 .setup .title {
+    margin-top: 133px;
+    background-image: url("/content/kor_lib/P/R2_voca_act/teacher/images/activity_time.png");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    height: 70px;
+}
+
+.page1 .setup .box {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.page1 .setup .box > div {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.page1 .setup .box .selector {
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    border-width: 0px;
+    margin: 0px 11px;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.page1 .setup .box .selector > .mask1 {
+    left: 92px;
+    width: 120px;
+    top: 2px;
+    height: 327px;
+    position: absolute;
+    overflow: hidden;
+}
+
+.page1 .setup .box .selector > .mask1 > div {
+    position: absolute;
+    width: 100%;
+    transition: transform 0.3s;
+}
+
+.page1 .setup .box .selector > .mask1 > div > div {
+    text-align: center;
+    width: 100%;
+}
+
+.page1 .setup .box .selector > .mask1 > div {
+    top: -16px;
+}
+
+.page1 .setup .box .selector > .mask1 > div > div {
+    height: 116px;
+    padding-top: 30px;
+    font-size: 60px;
+    font-weight: normal;
+    color: rgba(41, 90, 167, 0.3);
+}
+
+.page1 .setup .box .selector > .mask1 > div > div:first-child {
+    padding: 0px;
+}
+
+.page1 .setup .box .selector > .up {
+    position: relative;
+    background-image: url("/content/kor_lib/P/R2_voca_act/teacher/images/select0.png");
+    background-repeat: no-repeat;
+    width: 411px;
+    height: 103px;
+}
+
+.page1 .setup .box .selector > .middle {
+    position: relative;
+}
+
+.page1 .setup .box .selector > .middle > .unlimit {
+    position: absolute;
+    top: 36px;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+    color: #295aa7;
+}
+
+.page1 .setup .box .selector > .middle > .mask2 {
+    left: 92px;
+    width: 120px;
+    top: 2px;
+    height: 110px;
+    background-color: #fff;
+    position: absolute;
+    overflow: hidden;
+}
+
+.page1 .setup .box .selector > .middle > .mask2 > div {
+    position: absolute;
+    width: 100%;
+    transition: transform 0.3s;
+}
+
+.page1 .setup .box .selector > .middle > .mask2 > div > div {
+    text-align: center;
+    width: 100%;
+}
+
+.page1 .setup .box .selector > .middle > .mask2 > div > div {
+    height: 116px;
+    padding-top: 20px;
+    font-size: 70px;
+    font-weight: bold;
+    color: #295aa7;
+}
+
+.page1 .setup .box .selector > .middle > .bg {
+    position: relative;
+    background-image: url("/content/kor_lib/P/R2_voca_act/teacher/images/select1.png");
+    width: 411px;
+    height: 122px;
+}
+
+.page1 .setup .box .selector > .down {
+    position: relative;
+    background-image: url("/content/kor_lib/P/R2_voca_act/teacher/images/select2.png");
+    background-repeat: no-repeat;
+    background-position: 0% 100%;
+    width: 411px;
+    height: 103px;
+}
+
+.page1 .setup .box .selector > .btnbox {
+    position: absolute;
+    top: 0px;
+    left: 228px;
+    text-align: center;
+}
+
+.page1 .setup .box .selector > .btnbox > .btn_up {
+    margin-top: 38px;
+    touch-action: none;
+    padding: 0px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    background-image: url("/content/kor_lib/P/R2_voca_act/teacher/images/btn_up.png");
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 24px;
+    pointer-events: unset;
+    cursor: pointer;
+}
+
+.page1 .setup .box .selector > .btnbox > .btn_up:disabled {
+    background-image: url("/content/kor_lib/P/R2_voca_act/teacher/images/btn_up_dis.png");
+    pointer-events: none;
+    cursor: auto;
+}
+
+.page1 .setup .box .selector > .btnbox > .btn_up.down {
+    background-image: url("/content/kor_lib/P/R2_voca_act/teacher/images/btn_up_down.png");
+}
+
+.page1 .setup .box .selector > .btnbox > .btn_up:before {
+    position: absolute;
+    pointer-events: none;
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+    overflow: hidden;
+    z-index: -1;
+    content: url("/content/kor_lib/P/R2_voca_act/teacher/images/btn_up.png") url("/content/kor_lib/P/R2_voca_act/teacher/images/btn_up_down.png") url("/content/kor_lib/P/R2_voca_act/teacher/images/btn_up_dis.png");
+}
+
+.page1 .setup .box .selector > .btnbox > .mins {
+    margin-top: 77px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #295aa7;
+}
+
+.page1 .setup .box .selector > .btnbox > .btn_down {
+    margin-top: 85px;
+    touch-action: none;
+    padding: 0px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    background-image: url("/content/kor_lib/P/R2_voca_act/teacher/images/btn_down.png");
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 24px;
+    pointer-events: unset;
+    cursor: pointer;
+}
+
+.page1 .setup .box .selector > .btnbox > .btn_down:disabled {
+    background-image: url("/content/kor_lib/P/R2_voca_act/teacher/images/btn_down_dis.png");
+    pointer-events: none;
+    cursor: auto;
+}
+
+.page1 .setup .box .selector > .btnbox > .btn_down.down {
+    background-image: url("/content/kor_lib/P/R2_voca_act/teacher/images/btn_down_down.png");
+}
+
+.page1 .setup .box .selector > .btnbox > .btn_down:before {
+    position: absolute;
+    pointer-events: none;
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+    overflow: hidden;
+    z-index: -1;
+    content: url("/content/kor_lib/P/R2_voca_act/teacher/images/btn_down.png") url("/content/kor_lib/P/R2_voca_act/teacher/images/btn_down_down.png") url("/content/kor_lib/P/R2_voca_act/teacher/images/btn_down_dis.png");
+}
+
+.page1 .setup .box .selector.disabled > .middle > .mask2 > div > div {
+    color: rgba(41, 90, 167, 0.3);
+}
+
+.page1 .setup .box .selector.disabled > .mask1 > div > div {
+    color: rgba(41, 90, 167, 0.2);
+}
+
+.page1 .setup .box .selector.disabled > .btnbox > .mins {
+    margin-top: 77px;
+    font-size: 28px;
+    font-weight: bold;
+    color: rgba(41, 90, 167, 0.3);
+}
+
+.page1 .setup .box .selector .unlimit {
+    opacity: 0.3;
+}
+
+.page1 .setup .box .btn_all {
+    border-radius: 10px;
+    touch-action: none;
+    padding: 0px;
+    border-width: 0px;
+    border-style: solid;
+    outline: none;
+    background-repeat: no-repeat;
+    pointer-events: unset;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    font-size: 28px;
+    border-bottom-width: 4px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+    display: block;
+    width: 255px;
+    height: 157px;
+    background-color: #23B0D6;
+    border-bottom-color: #1C8DAC;
+}
+
+.page1 .setup .box .btn_all.on {
+    color: #ff0;
+    border-top-style: inset;
+    border-top-width: 1px;
+    border-top-color: #fff;
+    background-color: #014368;
+    border-bottom-width: 3px;
+    border-bottom-color: #002950;
+}
+
+.page1 .setup .box .btn_unlimit {
+    border-radius: 10px;
+    touch-action: none;
+    padding: 0px;
+    border-width: 0px;
+    border-style: solid;
+    outline: none;
+    background-repeat: no-repeat;
+    pointer-events: unset;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    font-size: 28px;
+    border-bottom-width: 4px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+    margin-top: 12px;
+    display: block;
+    width: 255px;
+    height: 157px;
+    background-color: #0C83A3;
+    border-bottom-color: #0A6983;
+}
+
+.page1 .setup .box .btn_unlimit.on {
+    color: #ff0;
+    border-top-style: inset;
+    border-top-width: 1px;
+    border-top-color: #fff;
+    background-color: #014368;
+    border-bottom-width: 3px;
+    border-bottom-color: #002950;
+}
+
+.page1 .setup .box .btn_start {
+    border-radius: 10px;
+    touch-action: none;
+    padding: 0px;
+    border-width: 0px;
+    border-style: solid;
+    outline: none;
+    background-repeat: no-repeat;
+    pointer-events: unset;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    font-size: 28px;
+    border-bottom-width: 4px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+    display: block;
+    width: 255px;
+    height: 326px;
+    font-size: 32px;
+    background-color: #E44761;
+    border-bottom-color: #8D2C3C;
+}
+
+.page1 .setup .box .btn_start.on {
+    color: #ff0;
+    border-top-style: inset;
+    border-top-width: 1px;
+    border-top-color: #fff;
+    background-color: #014368;
+    border-bottom-width: 3px;
+    border-bottom-color: #002950;
+}
+
+.page1 .setup .box .btn_start.down {
+    color: #ff0;
+    border-top-style: inset;
+    border-top-width: 1px;
+    border-top-color: #fff;
+    background-color: #B11C35;
+    border-bottom-width: 3px;
+    border-bottom-color: #701216;
+}
+
+.page1 .quiz {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    top: 0px;
+    height: 100%;
+}
+
+.page1 .quiz .page_info {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 21px;
+    margin-top: 60px;
+    color: white;
+}
+
+.page1 .quiz .page_info .blue_color {
+    color: #0ff;
+}
+
+.page1 .quiz .page_info .divide_char {
+    color: #ccc;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.page1 .quiz .timer {
+    position: absolute;
+    left: 74px;
+    top: 13px;
+}
+
+.page1 .quiz .voca_slides {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    top: 0px;
+    height: 100%;
+    z-index: -1;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.2, 0.2);
+    transition: transform 0.3s ease-in 0s, opacity 0s ease 0.3s;
+    text-align: center;
+}
+
+.page1 .quiz .voca_slides .ks_btn_prev_h {
+    left: 60px;
+}
+
+.page1 .quiz .voca_slides .ks_btn_prev_h:disabled {
+    opacity: 0.3;
+}
+
+.page1 .quiz .voca_slides .ks_btn_next_h {
+    right: 60px;
+}
+
+.page1 .quiz .voca_slides .ks_btn_next_h:disabled {
+    opacity: 0.3;
+}
+
+.page1 .quiz .voca_slides .info {
+    font-size: 22px;
+    margin-top: 120px;
+}
+
+.page1 .quiz .voca_slides .info > span:nth-child(1) {
+    color: #0ff;
+}
+
+.page1 .quiz .voca_slides .info > span:nth-child(2) {
+    color: #ccc;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.page1 .quiz .voca_slides .info > span:nth-child(3) {
+    color: #fff;
+}
+
+.page1 .quiz .voca_slides.on {
+    z-index: 10;
+    opacity: 1;
+    pointer-events: auto;
+    animation-duration: 0.3s;
+    transform: scale(1, 1);
+    transition: transform 0.3s cubic-bezier(0.405, 0.42, 0.135, 1.2) 0s;
+}
+
+.page1 .quiz .voca_slides .common_back {
+    position: absolute;
+    bottom: 15px;
+    right: 5px;
+    z-index: 2;
+}
+
+.page1 .quiz .voca_slides .voca_slide {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 164px;
+    margin-left: 20px;
+    background-image: url("/content/kor_lib/P/R2_voca_act/teacher/images/slide_bg.png");
+    width: 1013px;
+    height: 524px;
+}
+
+.page1 .quiz .voca_slides .voca_slide > .voca {
+    position: absolute;
+    left: 32px;
+    right: 50px;
+    top: 110px;
+    bottom: 110px;
+    display: block;
+    color: #fff;
+    font-size: 120px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.page1 .quiz .voca_slides .voca_slide .audio {
+    margin-right: 20px;
+    margin-top: 22px;
+    background-size: 100% 100%;
+    touch-action: none;
+    padding: 0px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    background-image: url("/content/kor_lib/images/btn_audio.svg");
+    background-repeat: no-repeat;
+    width: 92px;
+    height: 92px;
+    pointer-events: unset;
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.3));
+}
+
+.page1 .quiz .voca_slides .voca_slide .audio:disabled {
+    background-image: url("/content/kor_lib/images/btn_audio_dis.svg");
+    pointer-events: none;
+    cursor: auto;
+}
+
+.page1 .quiz .voca_slides .voca_slide .audio.on {
+    background-image: url("/content/kor_lib/images/btn_audio_on.svg");
+}
+
+.page1 .quiz .voca_slides .voca_slide .audio:before {
+    position: absolute;
+    pointer-events: none;
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+    overflow: hidden;
+    z-index: -1;
+    content: url("/content/kor_lib/images/btn_audio.svg") url("/content/kor_lib/images/btn_audio_on.svg") url("/content/kor_lib/images/btn_audio_dis.svg");
+}
+
+.page1 .quiz.slideon .card_container {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.page1 .quiz .card_container {
+    position: relative;
+    text-align: center;
+    top: 100px;
+    margin: 0px 50px;
+}
+
+.page1 .quiz .card_container > .box {
+    position: relative;
+    padding: 15px 15px 0px 15px;
+    transition: opacity 0.3s;
+    /*
+		&>.card.checked>.front{
+			border: 4px solid #F5FF4E;
+			color: #F5FF4E;
+			// background-image: resolve("common/back1.png");
+		}
+		*/
+}
+
+.page1 .quiz .card_container > .box > .card {
+    touch-action: none;
+    position: relative;
+    perspective: 800px;
+    transform-style: preserve-3d;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0px 13px 20px 13px;
+    width: 260px;
+    height: 134px;
+}
+
+.page1 .quiz .card_container > .box > .card > .front {
+    border: 2px solid #fff;
+    color: #fff;
+    font-family: NanumBarunGothicKor;
+    font-weight: bold;
+    font-size: 38px;
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: rotateY(0deg);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 260px;
+    height: 134px;
+    box-sizing: border-box;
+    outline-width: 0px;
+    cursor: pointer;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    transition: transform 0.4s ease-in;
+    transform-style: preserve-3d;
+    box-shadow: 6px 4px 7px 0 rgba(0, 0, 0, 0.3);
+}
+
+.page1 .quiz .card_container > .box > .card > .back {
+    touch-action: none;
+    padding-top: 60px;
+    background-image: url("/content/kor_lib/P/R2_voca_act/common/back0.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    transform: rotateY(180deg);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 260px;
+    height: 134px;
+    box-sizing: border-box;
+    outline-width: 0px;
+    cursor: pointer;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    transition: transform 0.4s ease-in;
+    transform-style: preserve-3d;
+    box-shadow: 6px 4px 7px 0 rgba(0, 0, 0, 0.3);
+}
+
+.page1 .quiz .card_container > .box > .card > .bird_svg {
+    position: absolute;
+    left: 0px;
+    width: 286px;
+    top: 0px;
+    height: 158px;
+    pointer-events: none;
+}
+
+.page1 .quiz .card_container > .box > .card.checked > .back {
+    background-image: url("/content/kor_lib/P/R2_voca_act/common/back1.png");
+}
+
+.page1 .quiz .card_container > .box > .card.front > .front {
+    transform: rotateY(0deg);
+}
+
+.page1 .quiz .card_container > .box > .card.front > .back {
+    transform: rotateY(180deg);
+}
+
+.page1 .quiz .card_container > .box > .card.wrong > .front {
+    transform: rotateY(0deg);
+    border: 0px solid #fff;
+    background-image: url("/content/kor_lib/P/R2_voca_act/common/back2.png");
+}
+
+.page1 .quiz .card_container > .box > .card.wrong > .back {
+    transform: rotateY(180deg);
+}
+
+.page1 .quiz .card_container > .box > .card.back > .front {
+    transform: rotateY(-180deg);
+}
+
+.page1 .quiz .card_container > .box > .card.back > .back {
+    transform: rotateY(0deg);
+}
+
+.page1 .quiz .card_container > .box.capture > .card {
+    transition: none;
+    transform-style: unset;
+    perspective: none;
+}
+
+.page1 .quiz .card_container > .box.capture > .card.front > .front {
+    background-color: #2CAFE3;
+    transform: none;
+    transform-style: unset;
+    backface-visibility: unset;
+    transition: unset;
+}
+
+.page1 .quiz .card_container > .box.capture > .card.front > .back {
+    visibility: hidden;
+}
+
+.page1 .quiz .card_container > .box.capture > .card.wrong > .front {
+    transform: none;
+    transform-style: unset;
+    backface-visibility: unset;
+    transition: unset;
+}
+
+.page1 .quiz .card_container > .box.capture > .card.wrong > .back {
+    visibility: hidden;
+    transform-style: none;
+}
+
+.page1 .quiz .swiper-pagination {
+    top: 50px;
+    height: 0;
+}
+
+.page1 .info_box {
+    position: absolute;
+    top: 36px;
+    right: 280px;
+    width: auto;
+    height: auto;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    right: 80px;
+}
+
+.page1 .info_box.on {
+    pointer-events: auto;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.page1 .info_box > .btn_answer {
+    display: inline-block;
+    vertical-align: middle;
+    touch-action: none;
+    padding: 0px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    background-image: url("/content/kor_lib/images/btn_answer.png");
+    background-repeat: no-repeat;
+    width: 48px;
+    height: 49px;
+    cursor: pointer;
+    pointer-events: unset;
+    margin-right: 3px;
+    pointer-events: unset;
+}
+
+.page1 .info_box > .btn_answer.on {
+    background-image: url("/content/kor_lib/images/btn_answer_on.png");
+}
+
+.page1 .info_box > .btn_answer:before {
+    position: absolute;
+    pointer-events: none;
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+    overflow: hidden;
+    z-index: -1;
+    content: url("/content/kor_lib/images/btn_answer.png") url("/content/kor_lib/images/btn_answer_on.png");
+}
+
+.page1 .info_box > .return_cnt_box {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    width: auto;
+    height: auto;
+    border: none;
+}
+
+.page1 .info_box > .return_cnt_box > div {
+    width: 73px;
+    height: 32px;
+    border: 3px solid rgba(255, 255, 255, 0.6);
+    border-radius: 16px;
+    text-align: center;
+    font-family: NotoSans;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 24px;
+    font-size: 18px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2) inset;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.page2 {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    top: 0px;
+    height: 100%;
+}
+
+.page2 #x_main {
+    padding: 67px 75px 88px;
+}
+
+.page2 #x_foot {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    background: url("/content/kor_lib/P/R2_voca_act/teacher/images/back.mask2.png") no-repeat;
+}
+
+.page2 .layout05 {
+    position: relative;
+    margin-top: 80px;
+}
+
+.page2 .layout05 ul {
+    list-style: none;
+    transition: opacity .5s .5s;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+}
+
+.page2 .layout05 ul li {
+    height: 86px;
+    padding: 0 20px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.25);
+    background: rgba(0, 0, 0, 0.1);
+    color: #fff;
+    font: 42px/82px NotokrM;
+    opacity: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.page2 .layout05 ul li.on {
+    padding: 0 18px;
+    border: 4px solid #f3ff41;
+    box-shadow: 7px 5px 15px rgba(0, 0, 0, 0.25), 0 0 10px rgba(246, 255, 118, 0.7);
+    color: #f3ff41;
+    line-height: 78px;
+}
+
+.page2 .layout05 ul li.off {
+    border-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.page2 .layout05 ul.on li {
+    animation: aniDropText1 linear;
+}
+
+.page2 .layout05 ul.on li.pause {
+    animation: unset;
+}
+
+.page2 .layout05 ul.fadeout {
+    opacity: 0;
+}
+
+.page2 .layout05 .top {
+    position: absolute;
+    left: 0;
+    top: -43px;
+    width: 100%;
+    height: 0;
+    text-align: center;
+    z-index: 1;
+}
+
+.page2 .layout05_foot ul {
+    margin-top: 87px;
+    text-align: center;
+}
+
+.page2 .layout05_foot li {
+    height: 68px;
+    padding: 0 .5em;
+    border-radius: 10px;
+    box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.3);
+    background: #fff;
+    color: #002985;
+    font: 40px/67px NotokrB;
+    opacity: 0;
+    transition: all .5s .3s;
+    display: inline-block;
+}
+
+.page2 .layout05_foot li + li {
+    margin-left: 30px;
+}
+
+.page2 .layout05_foot li.on {
+    opacity: 1;
+}
+
+.page2 .layout05 .pause_btn {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    width: 108px;
+    height: 39px;
+    background: url("/content/kor_lib/P/R2_voca_act/teacher/images/pause_btn.png") no-repeat;
+}
+
+.page2 .layout05 .pause_btn.paused {
+    background-image: url("/content/kor_lib/P/R2_voca_act/teacher/images/pause_btn_o.png");
+}
+
+.page2 .layout05 .pause_btn.dpnone {
+    opacity: 0;
+}
+
+.page2 .btnSound1 {
+    width: 78px;
+    height: 78px;
+    background: url("/content/kor_lib/P/R2_voca_act/teacher/images/ico02.01.png") no-repeat;
+    display: inline-block;
+}
+
+.page2 .btnSound1.on {
+    background-position: -78px 0;
+}
+
+@keyframes aniDropText1 {
+    .1% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    80% {
+        opacity: 1;
+    }
+    95% {
+        opacity: 0;
+        transform: translateY(360px);
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.page2 .info_box {
+    position: absolute;
+    top: 36px;
+    right: 280px;
+    width: auto;
+    height: auto;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    right: 80px;
+}
+
+.page2 .info_box.on {
+    pointer-events: auto;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.page2 .info_box > .btn_answer {
+    display: inline-block;
+    vertical-align: middle;
+    touch-action: none;
+    padding: 0px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    background-image: url("/content/kor_lib/images/btn_answer.png");
+    background-repeat: no-repeat;
+    width: 48px;
+    height: 49px;
+    cursor: pointer;
+    pointer-events: unset;
+    margin-right: 3px;
+    pointer-events: unset;
+}
+
+.page2 .info_box > .btn_answer.on {
+    background-image: url("/content/kor_lib/images/btn_answer_on.png");
+}
+
+.page2 .info_box > .btn_answer:before {
+    position: absolute;
+    pointer-events: none;
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+    overflow: hidden;
+    z-index: -1;
+    content: url("/content/kor_lib/images/btn_answer.png") url("/content/kor_lib/images/btn_answer_on.png");
+}
+
+.page2 .info_box > .return_cnt_box {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    width: auto;
+    height: auto;
+    border: none;
+}
+
+.page2 .info_box > .return_cnt_box > div {
+    width: 73px;
+    height: 32px;
+    border: 3px solid rgba(255, 255, 255, 0.6);
+    border-radius: 16px;
+    text-align: center;
+    font-family: NotoSans;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 24px;
+    font-size: 18px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2) inset;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+button:focus, input:focus {
+    outline: none !important;
+}
+
+#common_navi_left {
+    left: 0px;
+    position: absolute;
+    display: table;
+    width: auto;
+    top: 0px;
+    height: 100%;
+    pointer-events: none;
+    transition: left 0.5s, right 0.5s;
+    /* transition-property: left right; */
+    z-index: 10000;
+    /* &.off{
+		left:-46px;	
+		button.left{
+			pointer-events: none;
+		}
+		button.right{
+			pointer-events: none;
+		}
+	} */
+}
+
+#common_navi_left > div {
+    width: auto;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    pointer-events: none;
+}
+
+#common_navi_left > div > div {
+    position: relative;
+    width: auto;
+    height: auto;
+    vertical-align: middle;
+    pointer-events: auto;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#common_navi_left button.left {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    touch-action: none;
+    padding: 0px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    background-image: url("/content/kor_lib/images/page_left_L.png");
+    background-repeat: no-repeat;
+    width: 64px;
+    height: 58px;
+    pointer-events: unset;
+    cursor: pointer;
+}
+
+#common_navi_left button.left:disabled {
+    background-image: url("/content/kor_lib/images/page_left_L_dis.png");
+    pointer-events: none;
+    cursor: auto;
+}
+
+#common_navi_left button.left.down {
+    background-image: url("/content/kor_lib/images/page_left_L_down.png");
+}
+
+#common_navi_left button.left:before {
+    position: absolute;
+    pointer-events: none;
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+    overflow: hidden;
+    z-index: -1;
+    content: url("/content/kor_lib/images/page_left_L.png") url("/content/kor_lib/images/page_left_L_down.png") url("/content/kor_lib/images/page_left_L_dis.png");
+}
+
+#common_navi_left button.right {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    pointer-events: auto;
+    touch-action: none;
+    padding: 0px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    background-image: url("/content/kor_lib/images/page_right_L.png");
+    background-repeat: no-repeat;
+    width: 64px;
+    height: 58px;
+    pointer-events: unset;
+    cursor: pointer;
+}
+
+#common_navi_left button.right:disabled {
+    background-image: url("/content/kor_lib/images/page_right_L_dis.png");
+    pointer-events: none;
+    cursor: auto;
+}
+
+#common_navi_left button.right.down {
+    background-image: url("/content/kor_lib/images/page_right_L_down.png");
+}
+
+#common_navi_left button.right:before {
+    position: absolute;
+    pointer-events: none;
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+    overflow: hidden;
+    z-index: -1;
+    content: url("/content/kor_lib/images/page_right_L.png") url("/content/kor_lib/images/page_right_L_down.png") url("/content/kor_lib/images/page_right_L_dis.png");
+}
+
+#common_navi_right {
+    right: 0px;
+    position: absolute;
+    display: table;
+    width: auto;
+    top: 0px;
+    height: 100%;
+    pointer-events: none;
+    transition: left 0.5s, right 0.5s;
+    /* transition-property: left right; */
+    z-index: 10000;
+    /* &.off{
+		right:-46px;
+		button.left{
+			pointer-events: none;
+		}
+		button.right{
+			pointer-events: none;
+		}	
+	} */
+}
+
+#common_navi_right > div {
+    width: auto;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    pointer-events: none;
+}
+
+#common_navi_right > div > div {
+    position: relative;
+    width: auto;
+    height: auto;
+    vertical-align: middle;
+    pointer-events: auto;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#common_navi_right button.left {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    touch-action: none;
+    padding: 0px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    background-image: url("/content/kor_lib/images/page_left_R.png");
+    background-repeat: no-repeat;
+    width: 64px;
+    height: 58px;
+    pointer-events: unset;
+    cursor: pointer;
+}
+
+#common_navi_right button.left:disabled {
+    background-image: url("/content/kor_lib/images/page_left_R_dis.png");
+    pointer-events: none;
+    cursor: auto;
+}
+
+#common_navi_right button.left.down {
+    background-image: url("/content/kor_lib/images/page_left_R_down.png");
+}
+
+#common_navi_right button.left:before {
+    position: absolute;
+    pointer-events: none;
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+    overflow: hidden;
+    z-index: -1;
+    content: url("/content/kor_lib/images/page_left_R.png") url("/content/kor_lib/images/page_left_R_down.png") url("/content/kor_lib/images/page_left_R_dis.png");
+}
+
+#common_navi_right button.right {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    pointer-events: auto;
+    touch-action: none;
+    padding: 0px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    background-image: url("/content/kor_lib/images/page_right_R.png");
+    background-repeat: no-repeat;
+    width: 64px;
+    height: 58px;
+    pointer-events: unset;
+    cursor: pointer;
+}
+
+#common_navi_right button.right:disabled {
+    background-image: url("/content/kor_lib/images/page_right_R_dis.png");
+    pointer-events: none;
+    cursor: auto;
+}
+
+#common_navi_right button.right.down {
+    background-image: url("/content/kor_lib/images/page_right_R_down.png");
+}
+
+#common_navi_right button.right:before {
+    position: absolute;
+    pointer-events: none;
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+    overflow: hidden;
+    z-index: -1;
+    content: url("/content/kor_lib/images/page_right_R.png") url("/content/kor_lib/images/page_right_R_down.png") url("/content/kor_lib/images/page_right_R_dis.png");
+}
+
+button:focus, input:focus {
+    outline: none !important;
+}
+
+.ks_btn_prev_h {
+    touch-action: none;
+    padding: 0px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    background-image: url("/content/kor_lib/images/ks_btn_prev.png");
+    background-repeat: no-repeat;
+    width: 48px;
+    height: 48px;
+    pointer-events: unset;
+    cursor: pointer;
+    z-index: 2;
+    position: absolute;
+    top: calc(50% - 48px/2);
+    left: 10px;
+}
+
+.ks_btn_prev_h:disabled {
+    background-image: url("/content/kor_lib/images/ks_btn_prev.png");
+    pointer-events: none;
+    cursor: auto;
+}
+
+.ks_btn_prev_h.down {
+    background-image: url("/content/kor_lib/images/ks_btn_prev_down.png");
+}
+
+.ks_btn_prev_h:before {
+    position: absolute;
+    pointer-events: none;
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+    overflow: hidden;
+    z-index: -1;
+    content: url("/content/kor_lib/images/ks_btn_prev.png") url("/content/kor_lib/images/ks_btn_prev_down.png") url("/content/kor_lib/images/ks_btn_prev.png");
+}
+
+.ks_btn_next_h {
+    touch-action: none;
+    padding: 0px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    background-image: url("/content/kor_lib/images/ks_btn_next.png");
+    background-repeat: no-repeat;
+    width: 48px;
+    height: 48px;
+    pointer-events: unset;
+    cursor: pointer;
+    z-index: 2;
+    position: absolute;
+    top: calc(50% - 48px/2);
+    right: 10px;
+}
+
+.ks_btn_next_h:disabled {
+    background-image: url("/content/kor_lib/images/ks_btn_next.png");
+    pointer-events: none;
+    cursor: auto;
+}
+
+.ks_btn_next_h.down {
+    background-image: url("/content/kor_lib/images/ks_btn_next_down.png");
+}
+
+.ks_btn_next_h:before {
+    position: absolute;
+    pointer-events: none;
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+    overflow: hidden;
+    z-index: -1;
+    content: url("/content/kor_lib/images/ks_btn_next.png") url("/content/kor_lib/images/ks_btn_next_down.png") url("/content/kor_lib/images/ks_btn_next.png");
+}
+
+.ks_btn_prev_v {
+    touch-action: none;
+    padding: 0px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    background-image: url("/content/kor_lib/images/ks_btn_up.png");
+    background-repeat: no-repeat;
+    width: 48px;
+    height: 48px;
+    pointer-events: unset;
+    cursor: pointer;
+    z-index: 2;
+    position: absolute;
+    left: calc(50% - 48px/2);
+    top: 10px;
+}
+
+.ks_btn_prev_v:disabled {
+    background-image: url("/content/kor_lib/images/ks_btn_up.png");
+    pointer-events: none;
+    cursor: auto;
+}
+
+.ks_btn_prev_v.down {
+    background-image: url("/content/kor_lib/images/ks_btn_up_down.png");
+}
+
+.ks_btn_prev_v:before {
+    position: absolute;
+    pointer-events: none;
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+    overflow: hidden;
+    z-index: -1;
+    content: url("/content/kor_lib/images/ks_btn_up.png") url("/content/kor_lib/images/ks_btn_up_down.png") url("/content/kor_lib/images/ks_btn_up.png");
+}
+
+.ks_btn_next_v {
+    touch-action: none;
+    padding: 0px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    background-image: url("/content/kor_lib/images/ks_btn_down.png");
+    background-repeat: no-repeat;
+    width: 48px;
+    height: 48px;
+    pointer-events: unset;
+    cursor: pointer;
+    z-index: 2;
+    position: absolute;
+    left: calc(50% - 48px/2);
+    bottom: 10px;
+}
+
+.ks_btn_next_v:disabled {
+    background-image: url("/content/kor_lib/images/ks_btn_down.png");
+    pointer-events: none;
+    cursor: auto;
+}
+
+.ks_btn_next_v.down {
+    background-image: url("/content/kor_lib/images/ks_btn_down_down.png");
+}
+
+.ks_btn_next_v:before {
+    position: absolute;
+    pointer-events: none;
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+    overflow: hidden;
+    z-index: -1;
+    content: url("/content/kor_lib/images/ks_btn_down.png") url("/content/kor_lib/images/ks_btn_down_down.png") url("/content/kor_lib/images/ks_btn_down.png");
+}
+
+.countdown {
+    position: relative;
+    background-image: url("/content/kor_lib/images/timer2.png");
+    width: 87px;
+    height: 95px;
+}
+
+.countdown > div {
+    position: absolute;
+    left: 0px;
+    right: 2px;
+    top: 36px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 0px 6px 8px rgba(0, 0, 0, 0.6);
+    color: #fff;
+}
+
+.q_timer {
+    position: relative;
+    background-image: url("/content/kor_lib/images/timer1.png");
+    width: 87px;
+    height: 95px;
+}
+
+.q_timer > svg {
+    position: absolute;
+    left: 10px;
+    top: 18px;
+}
+
+.q_timer > div {
+    position: absolute;
+    left: 16px;
+    right: 17px;
+    top: 24px;
+    bottom: 17px;
+    border-radius: 50%;
+    padding-top: 18px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.countdown2 {
+    display: flex;
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    top: 50%;
+    height: 328px;
+    transform: translateY(-50%);
+    vertical-align: middle;
+    background-color: rgba(0, 0, 0, 0.2);
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.countdown2.hide {
+    display: none;
+}
+
+.countdown2 .countdown {
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+    background-image: radial-gradient(#F79A1B 0%, #FACE5D 40%, #FFFF00 90%);
+    transform: scale(1, 1);
+    opacity: 1;
+}
+
+.countdown2 .countdown.hide {
+    transition: transform 0.3s, opacity 0.3s;
+    transform: scale(0.2, 0.2);
+    opacity: 0.1;
+}
+
+.countdown2 .countdown canvas {
+    vertical-align: middle;
+}
+
+.countdown2 .countdown > div {
+    border-radius: 50%;
+    border: 8px solid #005686;
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    top: 0px;
+    height: 100%;
+}
+
+.countdown2 .countdown > div > div {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    top: 0px;
+    height: 100%;
+    text-align: center;
+    font-size: 120px;
+    line-height: 206px;
+    font-weight: bold;
+    color: #fff;
+}
+
+button:focus, input:focus {
+    outline: none !important;
+}
+
+.fel_topad {
+    position: absolute;
+    z-index: 11;
+    touch-action: none;
+    bottom: 15px;
+    right: 5px;
+    filter: drop-shadow(6px 6px 4px rgba(0, 0, 0, 0.8));
+    touch-action: none;
+    padding: 0px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    background-image: url("/content/kor_lib/images/topad.svg");
+    background-repeat: no-repeat;
+    width: 81px;
+    height: 75px;
+    cursor: pointer;
+    pointer-events: unset;
+}
+
+.fel_topad.on {
+    background-image: url("/content/kor_lib/images/topad_on.svg");
+}
+
+.fel_topad:before {
+    position: absolute;
+    pointer-events: none;
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+    overflow: hidden;
+    z-index: -1;
+    content: url("/content/kor_lib/images/topad.svg") url("/content/kor_lib/images/topad_on.svg");
+}
+
+.fel_topad.on {
+    filter: drop-shadow(6px 6px 4px rgba(0, 0, 0, 0.6));
+}
+
+.fel_toteacher {
+    position: absolute;
+    z-index: 11;
+    touch-action: none;
+    bottom: 20px;
+    right: 20px;
+    filter: drop-shadow(6px 6px 4px rgba(0, 0, 0, 0.8));
+    touch-action: none;
+    padding: 0px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    background-image: url("/content/kor_lib/images/toteacher.svg");
+    background-repeat: no-repeat;
+    width: 95px;
+    height: 87px;
+    cursor: pointer;
+    pointer-events: unset;
+}
+
+.fel_toteacher.on {
+    background-image: url("/content/kor_lib/images/toteacher_on.svg");
+}
+
+.fel_toteacher:before {
+    position: absolute;
+    pointer-events: none;
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+    overflow: hidden;
+    z-index: -1;
+    content: url("/content/kor_lib/images/toteacher.svg") url("/content/kor_lib/images/toteacher_on.svg");
+}
+
+.fel_toteacher.on {
+    filter: drop-shadow(6px 6px 4px rgba(0, 0, 0, 0.6));
+}
+
+button:focus, input:focus {
+    outline: none !important;
+}
+

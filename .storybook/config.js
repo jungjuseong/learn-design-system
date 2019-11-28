@@ -1,6 +1,6 @@
 import React from 'react';
 import { configure, addDecorator  } from '@storybook/react';
-import { GlobalStyle } from '../src/shared/global';
+import { GlobalStyle } from '../src/basic/shared/global';
 
 addDecorator(story => (
     <React.Fragment>
@@ -10,4 +10,4 @@ addDecorator(story => (
 ));
 
 // automatically import all files ending in *.stories.js
-configure(require.context('../src/stories', true, /\.stories\.js$/), module);
+configure(require.context('../src', true, /\.stories\.jsx?$/), module);
